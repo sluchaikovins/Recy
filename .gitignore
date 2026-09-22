@@ -1,0 +1,55 @@
+# ---------- Зависимости и сборка ----------
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# ---------- Секреты ----------
+# Настоящие значения живут только локально. Шаблон — в backend/.env.example
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+google-services.json
+serviceAccountKey.json
+
+# ---------- Данные пользователя ----------
+# База с тратами и загруженные фотографии чеков: персональные данные,
+# в репозитории им не место ни при каких условиях.
+data/
+backend/data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ---------- Языковые данные Tesseract ----------
+# Скачиваются автоматически при первом распознавании, весят ~10 МБ
+*.traineddata
+
+# ---------- Шрифт названия ----------
+# Unifix SP Demo — shareware, его лицензия запрещает распространение.
+# Кладётся локально, см. frontend/public/fonts/README.md
+frontend/public/fonts/recy-brand.*
+
+# ---------- Редакторы и ОС ----------
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# ---------- Логи и временные файлы ----------
+*.log
+npm-debug.log*
+coverage/
+.cache/
+tmp/
